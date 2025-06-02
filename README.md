@@ -8,7 +8,18 @@ The resulting light curve is constructed by superimposing Gaussian-shaped bursts
 
 > *Illustration: Magnetospheric accretion from a protoplanetary disk with bursts modeled as Gaussian events, where the amplitude and width depend on the clump mass and time.*
 
-This toy model was inspired by the ongoing work of **Tao Ji** and **Greg Herczeg**, who are developing observational and theoretical tools to understand burst-dominated accretion in TW Hya. The approach here allows others to generate synthetic light curves with physically motivated burst properties, suitable for testing fitting strategies or comparing with TESS/ground-based data.
+This toy model was inspired by the ongoing work of **Tao Ji** and **Greg Herczeg**, who are developing observational and theoretical tools to understand burst-dominated accretion in TW Hya. The approach here allows others to generate synthetic light curves with physically motivated burst properties, suitable for testing fitting strategies (very tricky  because stochasticity) or comparing with TESS/ground-based data (using a Bayesian framework to compare statistical properties of the light curves with real data).
+
+This implementation is adapted to the well-studied CTTS **TW Hya**, assuming:
+
+- Stellar mass: **0.8 M$_\odot$**
+- Stellar radius: **1.1 R$_\odot$**
+- Magnetospheric truncation radius: **3.5 R$_\star$**
+
+The bursts are constrained within:
+- **Clump masses** ranging from ~3x10⁻14 to 4.5x10⁻11 M$_\odot$
+- **Durations** from ~0.04 to ~17 days  
+- A squashed **log-normal correlation** between clump mass and duration, consistent with the linear relationship found in the analysis by **Tao Ji & Greg Herczeg (in prep)**.
 
 ## How to Use
 
