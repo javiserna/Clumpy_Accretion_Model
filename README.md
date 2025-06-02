@@ -26,7 +26,7 @@ The bursts are constrained within:
 Make sure you have Python 3 installed along with NumPy and Matplotlib:
 
 ```bash
-pip install numpy matplotlib
+pip install numpy matplotlib scipy
 ```
 
 Then, you can generate a synthetic clumpy accretion light curve with:
