@@ -12,15 +12,16 @@ This toy model was inspired by the ongoing work of **Tao Ji** and **Greg Herczeg
 
 ## How to Use
 
-Make sure you have Python 3 installed along with NumPy and Matplotlib.
+Make sure you have Python 3 installed along with NumPy and Matplotlib:
 
 ```bash
 pip install numpy matplotlib
+```
 
 Then, you can generate a synthetic clumpy accretion light curve with:
 
+```python
 from clumpy_toy_model import generate_clumpy_lightcurve
-
 time, Mdot = generate_clumpy_lightcurve(
     total_days=25,
     mean_bursts_per_day=2.5,
@@ -28,21 +29,23 @@ time, Mdot = generate_clumpy_lightcurve(
     duration_range=(0.1, 0.6),
     seed=42
 )
+```
 
 This returns:
-	•	time: Array of time values (in days).
-	•	Mdot: Mass accretion rate at each time step (in solar masses per year).
+- `time`: Array of time values (in days).
+- `Mdot`: Mass accretion rate at each time step (in solar masses per year).
 
 You can also plot the light curve:
 
+```python
 import matplotlib.pyplot as plt
-
 plt.plot(time, Mdot)
 plt.xlabel("Time (days)")
-plt.ylabel("Mass Accretion Rate (M$_\odot$/yr)")
+plt.ylabel("Mass Accretion Rate (M$_\\odot$/yr)")
 plt.title("Synthetic Clumpy Accretion Light Curve")
 plt.show()
+```
 
-Credits
+## Credits
 
 This model is for exploratory and illustrative purposes only. It was inspired by the theoretical and observational framework developed by Tao Ji and Greg Herczeg.
