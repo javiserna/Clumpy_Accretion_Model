@@ -35,14 +35,16 @@ Then, you can generate a synthetic clumpy accretion light curve with:
 from clumpy_toy_model import run_clumpy_model, G, M_star, R_star
 import numpy as np
 
+# Call the model
 result = run_clumpy_model(
-    alpha=-1.2,
-    mu_log=np.log(1.5),
-    sigma_log=1,
-    rho=0.98,
-    total_days=25,
-    cadence_min=2
+    alpha=-1.2,              # Power-law slope of the clump mass distribution
+    mu_log=np.log(1.5),      # Mean of the log-duration distribution (in log-days)
+    sigma_log=1,             # Dispersion of the log-duration distribution
+    rho=0.98,                # Correlation between clump mass and duration (in log-log space)
+    total_days=25,           # Total simulation time in days
+    cadence_min=2            # Time resolution in minutes
 )
+
 
 # Extract components
 t = result['time_days']
