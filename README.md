@@ -103,4 +103,4 @@ The `run_clumpy_model()` function returns a dictionary with:
 
 ## Credits
 
-This model is for exploratory and illustrative purposes only. It was inspired by the theoretical and observational framework developed by Tao Ji and Greg Herczeg.
+This model is for exploratory and illustrative purposes only. It was inspired by the work in progress by Tao Ji and Greg Herczeg.
